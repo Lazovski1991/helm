@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.app }}
+    owner: {{ .Values.labels.owner }}
+spec:
+  selector:
+    matchLabels:
+      project: {{ .Values.app }}  #service with look for those PODS Labels
+  template:
+    metadata:
+      labels:
+        project: {{ .Values.app }}
+    spec:
+      containers:
+        - name: {{ .Values.app }}
+          image: {{ .Values.image.name }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.app }}
