@@ -17,9 +17,4 @@ averageUtilization:
   cpu: 50
   memory: 80
 
-variables:
-  KEYCLOAK_REALM: "template"
-  KEYCLOAK_CLIENT: "template-service"
-  KEYCLOAK_SECRET: 55dfb226-6360-4222-91de-ee27d804ebe2
-  KEYCLOAK_URL: https://javaforall.tech/oauth/auth/
-  SPRING_PROFILES_ACTIVE: prod
+variables: []
