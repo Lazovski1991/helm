@@ -1,6 +1,0 @@
-apiVersion: v2
-name: microservice
-description: Helm chart for spring boot microservice
-type: application
-version: 1.0.0
-
