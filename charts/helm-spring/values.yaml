@@ -17,4 +17,8 @@ averageUtilization:
   cpu: 50
   memory: 80
 
+#variables use your app
 variables: []
+
+#secrets use your app
+secrets: []
