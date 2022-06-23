@@ -17,8 +17,14 @@ averageUtilization:
   cpu: 50
   memory: 80
 
+ingress:
+  name: ingress
+  nameSecretTls: secret-tls
+
+host: javaforall.tech
+
 #variables use your app
 variables: []
 
-#secrets use your app
+#secrets use your app base64 format
 secrets: []
