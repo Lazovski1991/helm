@@ -14,7 +14,7 @@ spec:
     - host: {{ .Values.host }}
       http:
         paths:
-          - path:  {{ "/api/".Values.host }}
+          - path:  {{ (list (include "/api") .Values.host | join "/")}}
             pathType: Prefix
             backend:
               service:
