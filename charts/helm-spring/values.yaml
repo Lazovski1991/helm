@@ -20,6 +20,7 @@ averageUtilization:
 ingress:
   name: ingress
   nameSecretTls: secret-tls
+  prefix: /api/template
 
 host: javaforall.tech
 

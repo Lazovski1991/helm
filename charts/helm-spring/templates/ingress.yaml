@@ -14,7 +14,7 @@ spec:
     - host: {{ .Values.host }}
       http:
         paths:
-          - path:  {{- join "/api/" .Values.app }}
+          - path:  {{ .Values.ingress.prefix }}
             pathType: Prefix
             backend:
               service:
