@@ -1,4 +1,4 @@
-app: template-service
+app: template
 
 image:
   name: nelson9291/template
