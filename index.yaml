@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   microservice:
   - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-06-23T00:26:05.024986899Z"
+    description: Helm chart for spring boot microservice
+    digest: 361de80417bdcf1da83a1defab187190a7e2144817ed096030930a2770c7b10b
+    name: microservice
+    type: application
+    urls:
+    - https://github.com/Lazovski1991/helm-repo/releases/download/microservice-0.0.2/microservice-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
     created: "2022-06-22T23:56:51.493512627Z"
     description: Helm chart for spring boot microservice
     digest: 4f271f27dc56d9e8e8809af2561b124ffbfb2c265f55cb445af95ad85582ecf4
@@ -10,4 +20,4 @@ entries:
     urls:
     - https://github.com/Lazovski1991/helm-spring/releases/download/microservice-0.0.1/microservice-0.0.1.tgz
     version: 0.0.1
-generated: "2022-06-22T23:56:51.493516727Z"
+generated: "2022-06-23T00:26:05.025002099Z"
