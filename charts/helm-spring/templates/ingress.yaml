@@ -4,6 +4,8 @@ metadata:
   name: {{ .Chart.Name }}
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    app.kubernetes.io/instance: { { .Release.Name } }
+    app.kubernetes.io/managed-by: { { .Release.Service } }
 spec:
   ingressClassName: nginx
   tls:
