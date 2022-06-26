@@ -22,16 +22,18 @@ averageUtilization:
 
 ingress:
   enabled: true
+  tls: secret-tls
   annotations:
     kubernetes.io/ingress.class: nginx
   hosts:
     host: javaforall.tech
     paths:
       - "/template"
-  tls:
-    - secretName: "secret-tls"
-      hosts:
-        - chart-example.local
+
+tls:
+  - secretName: "secret-tls"
+    hosts:
+      - chart-example.local
 
 
 
