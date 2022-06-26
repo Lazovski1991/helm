@@ -23,6 +23,16 @@ entries:
   spring-application:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-06-26T21:40:01.942185396Z"
+    description: Helm chart for spring boot microservice
+    digest: 37ed6d7664fa85843d6fe9192802054c00293da985dc2896ba0e9a3a80a89bd8
+    name: spring-application
+    type: application
+    urls:
+    - https://github.com/Lazovski1991/helm-repo/releases/download/spring-application-0.0.46/spring-application-0.0.46.tgz
+    version: 0.0.46
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-06-26T21:36:43.584713338Z"
     description: Helm chart for spring boot microservice
     digest: 1bc9b8c5f226e62f2c507dabad7858ef9ee3f698f5a771d78c68efd0f0b18f72
@@ -201,4 +211,4 @@ entries:
     urls:
     - https://github.com/Lazovski1991/helm-repo/releases/download/spring-application-0.0.1/spring-application-0.0.1.tgz
     version: 0.0.1
-generated: "2022-06-26T21:36:43.584837539Z"
+generated: "2022-06-26T21:40:01.942355806Z"
