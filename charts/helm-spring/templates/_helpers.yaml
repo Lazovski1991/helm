@@ -1,11 +1,3 @@
-{{- define "microservice.name" -}}
-{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
-{{- define "microservice.chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
 {{- define "microservice.fullname" -}}
   {{- if .Values.fullnameOverride -}}
   {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
