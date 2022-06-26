@@ -1,22 +1,20 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Chart.Name }}
+  name: {{ .Values.app }}
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    app.kubernetes.io/instance: {{ .Release.Name }}
-    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
         - {{ .Values.host }}
-      secretName: {{ .Values.ingress.nameSecretTls }}
+      secretName: {{ .Values.ingress.tls }}
   rules:
     - host: {{ .Values.host }}
       http:
         paths:
-          - path:  {{ .Values.ingress.prefix }}
+          - path:  /api/{{ .Values.app }}
             pathType: Prefix
             backend:
               service:
