@@ -3,4 +3,4 @@ name: spring-application
 description: Helm chart for spring boot microservice
 type: application
 appVersion: 0.0.1
-version: 0.0.36
+version: 0.0.37
