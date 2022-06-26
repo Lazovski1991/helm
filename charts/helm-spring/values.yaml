@@ -31,7 +31,7 @@ ingress:
       - "/template"
 
 tls:
-  - secretName: "secret-tls"
+  - secretName: secret-tls
     hosts:
       - chart-example.local
 
