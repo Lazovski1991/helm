@@ -49,14 +49,14 @@ spec:
     {{- end }}
   rules:
   {{- range .Values.ingress.hosts }}
-    - host: {{ .host | quote }}
-      http:
-        paths:
-        {{- range .paths }}
-        - path: {{ default "/api" . }}
-          backend:
-            serviceName: {{ $fullName }}
-            servicePort: http
+  - host: {{ .host | quote }}
+    http:
+      paths:
+      {{- range .paths }}
+      - path: {{ default "/api" . }}
+        backend:
+          serviceName: {{ $fullName }}
+          servicePort: http
     {{- end }}
   {{- end }}
-{{- end }}
+  {{- end }}
