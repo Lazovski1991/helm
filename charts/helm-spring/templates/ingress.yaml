@@ -27,7 +27,7 @@ spec:
           http:
             paths:
             {{- range .paths }}
-              - path: /api{{ . }}
+              - path: {{ "/api" . }}
                 pathType: Prefix
                 backend:
                   service:
