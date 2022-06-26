@@ -53,9 +53,9 @@ spec:
     http:
       paths:
       {{- range .paths }}
-      - path: {{ default "/api" . }}
+      - path: {{ default "/api" .path }}
         backend:
-          serviceName: {{ $fullName }}
+          serviceName: {{ .Values.app }}
           servicePort: http
     {{- end }}
   {{- end }}
