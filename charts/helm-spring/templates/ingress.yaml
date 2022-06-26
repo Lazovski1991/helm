@@ -26,7 +26,7 @@
 
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "microservice.fullname" . -}}
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
@@ -44,7 +44,7 @@ spec:
       {{- range .hosts }}
       - {{ . | quote }}
       {{- end }}
-      secretName: {{ .secretName }}
+    secretName: {{ .secretName }}
       {{- end }}
     {{- end }}
   rules:
@@ -55,10 +55,8 @@ spec:
         {{- range .paths }}
           - path: {{ default "/api" . }}
             backend:
-              service:
-                name: {{ $fullName }}
-                port:
-                  number: 8080
+              serviceName: {{ $fullName }}
+              servicePort: http
     {{- end }}
   {{- end }}
 {{- end }}
