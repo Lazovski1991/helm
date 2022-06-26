@@ -6,9 +6,6 @@ image:
 
 namespace: default
 
-nameOverride: ""
-fullnameOverride: ""
-
 labels:
   owner: alex
 
@@ -21,21 +18,11 @@ averageUtilization:
   memory: 80
 
 ingress:
-  enabled: true
-  tls: secret-tls
-  annotations:
-    kubernetes.io/ingress.class: nginx
-  hosts:
-    host: javaforall.tech
-    paths:
-      - "/template"
+  name: ingress
+  nameSecretTls: secret-tls
+  prefix: /api/template
 
-tls:
-  - secretName: secret-tls
-    hosts:
-      - chart-example.local
-
-
+host: javaforall.tech
 
 #variables use your app
 variables: []
