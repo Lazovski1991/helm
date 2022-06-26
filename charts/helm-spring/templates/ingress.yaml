@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - {{ .Values.host }}
+        - {{ .Values.ingress.host }}
       secretName: {{ .Values.ingress.tls }}
   rules:
-    - host: {{ .Values.host }}
+    - host: {{ .Values.ingress.host }}
       http:
         paths:
           - path:  /api/{{ .Values.app }}

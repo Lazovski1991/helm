@@ -18,10 +18,8 @@ averageUtilization:
   memory: 80
 
 ingress:
-  name: ingress
+  host: javaforall.tech
   tls: secret-tls
-
-host: javaforall.tech
 
 #variables use your app
 variables: []
