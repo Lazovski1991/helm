@@ -18,6 +18,7 @@ averageUtilization:
   memory: 80
 
 ingress:
+  enabled: true
   host: javaforall.tech
   tls: secret-tls
 
