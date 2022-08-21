@@ -22,6 +22,10 @@ ingress:
   host: javaforall.tech
   tls: secret-tls
 
+dns:
+  dnsPolicy: ClusterFirst
+  nameservers: 8.8.8.8
+
 #variables use your app
 variables: []
 

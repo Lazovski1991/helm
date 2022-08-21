@@ -25,3 +25,7 @@ spec:
                 name: {{ .Values.app }}
             - secretRef:
                 name: {{ .Values.app }}
+      dnsPolicy: {{ .Values.dns.dnsPolicy }}
+      dnsConfig:
+        nameservers:
+          - {{ .Values.dns.nameservers }}
