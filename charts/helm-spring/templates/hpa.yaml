@@ -1,4 +1,4 @@
-apiVersion: autoscaling/v2
+apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
   name: {{ .Values.app }}
@@ -8,8 +8,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: {{ .Values.app }}
-  maxReplicas: {{ .Values.replicas.min }}
-  minReplicas: {{ .Values.replicas.max }}
+  maxReplicas: {{ .Values.replicas.max }}
+  minReplicas: {{ .Values.replicas.min }}
   metrics:
     - type: Resource
       resource:
